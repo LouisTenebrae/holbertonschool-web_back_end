@@ -12,3 +12,5 @@ function getBudgetForCurrentYear(income, gdp, capita) {
 
     return budget;
 }
+
+module.exports = getBudgetForCurrentYear;
