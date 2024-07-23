@@ -1,17 +1,7 @@
-function taskFirst() {
-    const task = 'I prefer const when I can.';
-    return task;
-}
-
-function getLast() {
-    return ' is okay';
-}
-
-function taskNext() {
-    let combination = 'But sometimes let';
-    combination += getLast();
-
-    return combination;
-}
-
-module.exports = { taskFirst, getLast, taskNext };
+export default function getListStudents() {
+    return [
+      { id: 1, firstName: 'Guillaume', location: 'San Francisco' },
+      { id: 2, firstName: 'James', location: 'Columbia' },
+      { id: 5, firstName: 'Serena', location: 'San Francisco' },
+    ];
+  }
