@@ -1,3 +1,5 @@
-
-const getSumOfHoods = (initialNumber, expansion1989 = 89, expansion2019 = 19) => initialNumber + expansion1989 + expansion2019;
-module.exports = getSumOfHoods;
+export default function getStudentIdsSum(studentList) {
+    return studentList.reduce(
+      (acummulator, student) => acummulator + student.id, 0,
+    );
+  }

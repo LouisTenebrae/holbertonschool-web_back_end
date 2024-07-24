@@ -1,10 +1,6 @@
-function getNeighborhoodsList() {
-    this.sanFranciscoNeighborhoods = ['SOMA', 'Union Square'];
-
-    this.addNeighborhood = (newNeighborhood) => {
-        this.sanFranciscoNeighborhoods.push(newNeighborhood);
-        return this.sanFranciscoNeighborhoods;
-    };
-}
-
-module.exports = getNeighborhoodsList;
+export default function getStudentsByLocation(listObjects, location) {
+    if (!Array.isArray(listObjects)) {
+      return [];
+    }
+    return listObjects.filter((student) => student.location === location);
+  }

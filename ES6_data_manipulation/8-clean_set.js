@@ -1,16 +1,9 @@
-function getCurrentYear() {
-    const date = new Date();
-    return date.getFullYear();
-}
-
-function getBudgetForCurrentYear(income, gdp, capita) {
-    const budget = {
-        [`income-${getCurrentYear()}`]: income,
-        [`gdp-${getCurrentYear()}`]: gdp,
-        [`capita-${getCurrentYear()}`]: capita,
-    };
-
-    return budget;
-}
-
-module.exports = getBudgetForCurrentYear;
+export default function cleanSet(set, startString) {
+    if (typeof startString !== 'string' || startString.length === 0) {
+      return '';
+    }
+    return Array.from(set)
+      .filter((item) => item.startsWith(startString))
+      .map((item) => item.slice(startString.length))
+      .join('-');
+  }

@@ -1,12 +1,6 @@
-function taskBlock(trueOrFalse) {
-    const task = false;
-    const task2 = true;
-
-    if (trueOrFalse) {
-
+export default function getListStudentIds(listObjects) {
+    if (!Array.isArray(listObjects)) {
+      return [];
     }
-
-    return [task, task2];
-}
-
-module.exports = taskBlock;
+    return listObjects.map((student) => student.id);
+  }

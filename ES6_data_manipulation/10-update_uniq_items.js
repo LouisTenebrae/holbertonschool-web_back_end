@@ -1,8 +1,10 @@
-
-export default function appendToEachArrayValue(array, appendString) {
-    const newarray = [];
-    for (const value of array) {
-        newarray.push(appendString + value);
+export default function updateUniqueItems(map) {
+    if (!(map instanceof Map)) {
+      throw new Error('Cannot process');
     }
-    return newarray;
-}
+    for (const [key, value] of map.entries()) {
+      if (value === 1) {
+        map.set(key, 100);
+      }
+    }
+  }
