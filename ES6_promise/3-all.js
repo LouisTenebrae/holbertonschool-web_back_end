@@ -1,12 +1,12 @@
-export default function getFullResponseFromAPI(success) {
-  return new Promise((resolve, reject) => {
-    if (success === true) {
-      resolve({
-        status: 200,
-        body: 'Success',
-      });
-    } else {
-      reject(Error('The fake API is not working currently'));
-    }
-  });
+import { uploadPhoto, createUser } from './utils';
+
+export default function handleProfileSignup() {
+  return Promise.all([uploadPhoto(), createUser()])
+    .then((values) => {
+      const [photo, user] = values;
+      console.log(`${photo.body} ${user.firstName} ${user.lastName}`);
+    })
+    .catch(() => {
+      console.log('Signup system offline');
+    });
 }
