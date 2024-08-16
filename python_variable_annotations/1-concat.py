@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """Fucntion concat that takes str1 and str2 and returns a concat string"""
 
 

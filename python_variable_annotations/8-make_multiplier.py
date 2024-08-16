@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """Function make_multiplier that takes a float multiplier as argument"""
 from typing import Callable
 

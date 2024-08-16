@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """Function add that takes float a and b and returns sum"""
 
 

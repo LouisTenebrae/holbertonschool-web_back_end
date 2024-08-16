@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """Function element_length that takes a list lst of strings as argument"""
 from typing import List, Tuple, Sequence, Iterable
 
