@@ -38,7 +38,7 @@ class Server:
         '''Returns the hypermedia pagination dictionary'''
         hyper_data = self.indexed_dataset()
 
-        assert type(index) == int and type(page_size) == int
+        assert type(index) is int and type(page_size) is int
         assert 0 <= index < len(hyper_data)
 
         next_index = index + page_size
